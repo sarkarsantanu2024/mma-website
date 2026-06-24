@@ -5,7 +5,14 @@ import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { heroData } from "@/data/hero";
-import { CheckCircle2, GraduationCap, Download, ChevronLeft, ChevronRight, Play } from "lucide-react";
+import {
+  CheckCircle2,
+  GraduationCap,
+  Download,
+  ChevronLeft,
+  ChevronRight,
+  Play,
+} from "lucide-react";
 import { Star, Sparkle, Burst, LoopArrow } from "@/components/Doodles";
 
 type Slide =
@@ -22,7 +29,8 @@ const slides: Slide[] = [
   {
     type: "video",
     src: "https://www.w3schools.com/html/mov_bbb.mp4",
-    poster: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1920&h=1080&fit=crop",
+    poster:
+      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1920&h=1080&fit=crop",
     alt: "Abacus training in action",
   },
   {
@@ -33,7 +41,8 @@ const slides: Slide[] = [
   {
     type: "video",
     src: "https://www.w3schools.com/html/movie.mp4",
-    poster: "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=1920&h=1080&fit=crop",
+    poster:
+      "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=1920&h=1080&fit=crop",
     alt: "Students at a national competition",
   },
 ];
@@ -44,14 +53,25 @@ const CHIP = [
   "bg-bubble text-paper",
   "bg-pine text-ink",
 ];
-const STAT_COLOR = ["bg-cobalt text-paper", "bg-tomato text-paper", "bg-grape text-paper"];
+const STAT_COLOR = [
+  "bg-cobalt text-paper",
+  "bg-tomato text-paper",
+  "bg-grape text-paper",
+];
 
 export function HeroSection() {
-  const autoplayRef = useRef(Autoplay({ delay: 5000, stopOnInteraction: false }));
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration: 32 }, [autoplayRef.current]);
+  const autoplayRef = useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: false }),
+  );
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration: 32 }, [
+    autoplayRef.current,
+  ]);
   const [selected, setSelected] = useState(0);
 
-  const scrollTo = useCallback((i: number) => emblaApi?.scrollTo(i), [emblaApi]);
+  const scrollTo = useCallback(
+    (i: number) => emblaApi?.scrollTo(i),
+    [emblaApi],
+  );
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
@@ -59,7 +79,9 @@ export function HeroSection() {
     if (!emblaApi) return;
     const onSelect = () => setSelected(emblaApi.selectedScrollSnap());
     emblaApi.on("select", onSelect);
-    return () => { emblaApi.off("select", onSelect); };
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
   }, [emblaApi]);
 
   return (
@@ -102,27 +124,32 @@ export function HeroSection() {
       {/* ---------- Overlay content (centered) ---------- */}
       <div className="pointer-events-none absolute inset-0 z-20">
         <div className="container-custom flex h-full items-center justify-center">
-          <div className="relative mx-auto max-w-3xl pointer-events-auto pt-16 text-center">
+          <div className="relative pointer-events-auto pt-16 text-center">
             {/* doodles */}
             <Star className="animate-wiggle absolute -left-6 top-20 hidden h-10 w-10 text-sun lg:block" />
             <Sparkle className="animate-float absolute -right-4 top-28 hidden h-8 w-8 text-bubble lg:block" />
 
-            <span className="eyebrow eyebrow--center mb-5 justify-center" style={{ color: "hsl(var(--sun))" }}>
+            <span
+              className="eyebrow eyebrow--center mb-5 justify-center"
+              style={{ color: "hsl(var(--sun))" }}
+            >
               India&apos;s Most-Loved Abacus Programme
             </span>
 
             <h1 className="display-xl text-paper drop-shadow-[0_2px_6px_rgba(0,0,0,0.25)]">
               Sharpen your child&apos;s{" "}
               <span className="relative inline-block">
-                <span className="highlight"><span>brain power</span></span>
+                <span className="highlight">
+                  <span>brain power</span>
+                </span>
                 <LoopArrow className="animate-bob absolute -right-9 -top-7 hidden h-11 w-11 text-sun sm:block" />
               </span>{" "}
               for life.
             </h1>
 
             <p className="mx-auto mt-5 max-w-xl text-lg text-paper/85">
-              Fun, science-backed brain-development classes for ages 5&ndash;14 —
-              where mental maths turns into superpowers and big confidence.
+              Fun, science-backed brain-development classes for ages 5&ndash;14
+              — where mental maths turns into superpowers and big confidence.
             </p>
 
             {/* chips */}
@@ -156,7 +183,11 @@ export function HeroSection() {
             {/* stats */}
             <div className="mx-auto mt-10 grid max-w-lg grid-cols-3 gap-3">
               {heroData.stats.map((stat, i) => (
-                <CounterStat key={stat.label} stat={stat} color={STAT_COLOR[i % STAT_COLOR.length]} />
+                <CounterStat
+                  key={stat.label}
+                  stat={stat}
+                  color={STAT_COLOR[i % STAT_COLOR.length]}
+                />
               ))}
             </div>
           </div>
@@ -186,7 +217,9 @@ export function HeroSection() {
             onClick={() => scrollTo(i)}
             aria-label={`Go to slide ${i + 1}`}
             className={`h-2.5 rounded-full transition-all ${
-              i === selected ? "w-8 bg-sun" : "w-2.5 bg-paper/50 hover:bg-paper/80"
+              i === selected
+                ? "w-8 bg-sun"
+                : "w-2.5 bg-paper/50 hover:bg-paper/80"
             }`}
           />
         ))}
@@ -214,7 +247,7 @@ function CounterStat({ stat, color }: CounterStatProps) {
           observer.disconnect();
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
     if (countRef.current) observer.observe(countRef.current);
     return () => observer.disconnect();

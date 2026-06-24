@@ -28,30 +28,41 @@ export function CentresSection() {
             </Reveal>
 
             <Reveal delay={1} className="relative mt-8">
-              <div className="relative overflow-hidden rounded-3xl border-2 border-black/10 bg-card shadow-sticker">
+              <div className="relative h-72 overflow-hidden rounded-3xl border border-black/10 shadow-sticker">
+                {/* map fills the whole frame */}
                 <img
                   src="https://commons.wikimedia.org/wiki/Special:FilePath/India%20West%20Bengal%20location%20map.svg?width=900"
                   alt="Map of West Bengal showing our centre locations"
-                  className="h-64 w-full object-contain p-3"
+                  className="absolute inset-0 h-full w-full object-cover"
                   onError={(e) => {
                     const img = e.currentTarget;
                     if (!img.dataset.fallback) {
                       img.dataset.fallback = "1";
-                      img.className = "h-64 w-full object-cover";
-                      img.src = "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=900&h=520&fit=crop";
+                      img.src = "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=900&h=560&fit=crop";
                     }
                   }}
                 />
-                <div className="absolute inset-0 bg-ink/5" />
-                {/* floating location pins */}
-                <span className="animate-float absolute left-10 top-12 grid h-9 w-9 place-items-center rounded-full border-2 border-black/10 bg-saffron text-ink shadow-sticker-sm">
-                  <MapPin className="h-4 w-4" />
-                </span>
-                <span className="animate-float absolute right-16 top-24 grid h-9 w-9 place-items-center rounded-full border-2 border-black/10 bg-tomato text-paper shadow-sticker-sm" style={{ animationDelay: "1s" }}>
-                  <MapPin className="h-4 w-4" />
-                </span>
-                <span className="animate-float absolute bottom-10 left-24 grid h-9 w-9 place-items-center rounded-full border-2 border-black/10 bg-cobalt text-paper shadow-sticker-sm" style={{ animationDelay: "0.5s" }}>
-                  <MapPin className="h-4 w-4" />
+                {/* soft brand wash for cohesion + legibility */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-deep/25 via-transparent to-deep/10" />
+
+                {/* balloon pins placed ON the map, each with a pulse ring */}
+                {[
+                  { c: "bg-saffron text-ink", x: "left-[26%]", y: "top-[30%]" },
+                  { c: "bg-tomato text-paper", x: "left-[58%]", y: "top-[26%]" },
+                  { c: "bg-cobalt text-paper", x: "left-[46%]", y: "top-[62%]" },
+                ].map((p, i) => (
+                  <span key={i} className={`absolute ${p.x} ${p.y} -translate-x-1/2 -translate-y-full`}>
+                    <span className="absolute -bottom-1 left-1/2 h-3 w-3 -translate-x-1/2 animate-ping rounded-full bg-paper/70" />
+                    <span className={`relative grid h-10 w-10 place-items-center rounded-full border-2 border-paper ${p.c} shadow-soft`}>
+                      <MapPin className="h-5 w-5" />
+                    </span>
+                  </span>
+                ))}
+
+                {/* count badge */}
+                <span className="absolute bottom-4 left-4 inline-flex items-center gap-1.5 rounded-full bg-paper/90 px-3 py-1.5 text-xs font-bold text-ink shadow-soft backdrop-blur">
+                  <MapPin className="h-3.5 w-3.5 text-tomato" />
+                  100+ centres across India
                 </span>
               </div>
               <Link href="/centres" className="btn-bold btn-saffron mt-6">
