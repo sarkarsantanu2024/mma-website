@@ -108,9 +108,9 @@ export function HeroSection() {
                   className="h-[88vh] min-h-[560px] w-full object-cover"
                 />
               )}
-              {/* deep navy wash (no harsh black) for legible text */}
-              <div className="absolute inset-0 bg-gradient-to-r from-deep/90 via-deep/65 to-deep/25" />
-              <div className="absolute inset-0 bg-gradient-to-t from-deep/60 to-transparent" />
+              {/* even deep-navy wash so centered text stays legible across the whole image */}
+              <div className="absolute inset-0 bg-deep/72" />
+              <div className="absolute inset-0 bg-gradient-to-t from-deep/55 via-deep/15 to-deep/35" />
               {slide.type === "video" && (
                 <span className="absolute right-6 top-28 inline-flex items-center gap-1.5 rounded-full bg-paper/15 px-3 py-1 text-xs font-bold uppercase tracking-wide text-paper backdrop-blur">
                   <Play className="h-3 w-3" /> Live class
@@ -136,7 +136,7 @@ export function HeroSection() {
               India&apos;s Most-Loved Abacus Programme
             </span>
 
-            <h1 className="display-xl text-paper drop-shadow-[0_2px_6px_rgba(0,0,0,0.25)]">
+            <h1 className="display-xl text-paper drop-shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
               Sharpen your child&apos;s{" "}
               <span className="relative inline-block">
                 <span className="highlight">

@@ -3,6 +3,7 @@ import { Header } from "./Header"
 import { Footer } from "./Footer"
 import { StatsBar } from "@/components/sections/StatsBar"
 import { CompetitionButton } from "@/components/CompetitionButton"
+import { BackToTop } from "@/components/BackToTop"
 
 interface LayoutProps {
   children: ReactNode
@@ -20,6 +21,7 @@ export function Layout({ children }: LayoutProps) {
       <StatsBar />
       <Footer />
       <CompetitionButton />
+      <BackToTop />
     </div>
   )
 }

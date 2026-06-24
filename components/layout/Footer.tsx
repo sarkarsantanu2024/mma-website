@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { footerLinks, contactInfo } from "@/data/navigation"
 import { Facebook, Instagram, Youtube, MessageCircle, MapPin, Phone, Mail, Clock } from "lucide-react"
-import { BackToTop } from "@/components/BackToTop"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -127,7 +126,6 @@ export function Footer() {
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="hover:text-paper">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-paper">Terms of Service</Link>
-            <BackToTop />
           </div>
         </div>
       </div>
