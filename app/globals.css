@@ -372,6 +372,25 @@
   .animate-wiggle { animation: wiggle 2.6s ease-in-out infinite; }
   .animate-spin-slow { animation: spinSlow 18s linear infinite; }
   .animate-bob { animation: bob 4s ease-in-out infinite; }
+  .animate-bead { animation: beadDrift 3.2s ease-in-out infinite; }
+  .animate-bead-rail { animation: beadBounce 1.5s ease-in-out infinite; }
+
+  /* for animating individual <circle>s inside an SVG */
+  .bead-pop {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: beadBounce 1.5s ease-in-out infinite;
+  }
+
+  @keyframes beadDrift {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-12px); }
+  }
+  @keyframes beadBounce {
+    0%, 100% { transform: translateY(0); }
+    35% { transform: translateY(-7px); }
+    70% { transform: translateY(0); }
+  }
 
   @keyframes wiggle {
     0%,100% { transform: rotate(-5deg); }
@@ -391,7 +410,8 @@
 
   @media (prefers-reduced-motion: reduce) {
     .reveal, .reveal-pop { opacity: 1 !important; transform: none !important; transition: none !important; }
-    .animate-float, .animate-marquee { animation: none !important; }
+    .animate-float, .animate-marquee, .animate-wiggle, .animate-spin-slow,
+    .animate-bob, .animate-bead, .animate-bead-rail, .bead-pop { animation: none !important; }
     html { scroll-behavior: auto; }
   }
 }

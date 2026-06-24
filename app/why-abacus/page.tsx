@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { Layout } from "@/components/layout"
 import { PageHero } from "@/components/sections/PageHero"
+import { AbacusIntroSection } from "@/components/sections/AbacusIntroSection"
 import { WhyMMASection } from "@/components/sections/WhyMMASection"
 import { HowItWorksSection } from "@/components/sections/HowItWorksSection"
 
@@ -23,6 +24,7 @@ export default function WhyAbacus() {
         image="https://images.unsplash.com/photo-1588072432836-e10032774350?w=1400&h=500&fit=crop"
         badge="Brain Development"
       />
+      <AbacusIntroSection />
       <WhyMMASection />
       <HowItWorksSection />
     </Layout>

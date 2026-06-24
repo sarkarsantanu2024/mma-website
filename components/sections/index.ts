@@ -1,4 +1,5 @@
 export { HeroSection } from "./HeroSection";
+export { AbacusIntroSection } from "./AbacusIntroSection";
 export { WhyMMASection } from "./WhyMMASection";
 export { CoursesSection } from "./CoursesSection";
 export { HowItWorksSection } from "./HowItWorksSection";

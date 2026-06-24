@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { Layout } from "@/components/layout"
 import {
   HeroSection,
+  AbacusIntroSection,
   WhyMMASection,
   CoursesSection,
   HowItWorksSection,
@@ -28,6 +29,7 @@ export default function Home() {
   return (
     <Layout>
       <HeroSection />
+      <AbacusIntroSection />
       <WhyMMASection />
       <CoursesSection />
       <HowItWorksSection />
