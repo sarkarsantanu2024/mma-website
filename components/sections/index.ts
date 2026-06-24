@@ -1,0 +1,12 @@
+export { HeroSection } from "./HeroSection";
+export { WhyMMASection } from "./WhyMMASection";
+export { CoursesSection } from "./CoursesSection";
+export { HowItWorksSection } from "./HowItWorksSection";
+export { EventsSection } from "./EventsSection";
+export { CentresSection } from "./CentresSection";
+export { FranchiseSection } from "./FranchiseSection";
+export { TestimonialsSection } from "./TestimonialsSection";
+export { GallerySection } from "./GallerySection";
+export { ContactSection } from "./ContactSection";
+export { StatsBar } from "./StatsBar";
+export { PageHero } from "./PageHero";
