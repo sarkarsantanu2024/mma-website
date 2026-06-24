@@ -55,13 +55,10 @@ export function HowItWorksSection() {
             const c = STEP[i % STEP.length]
             return (
               <Reveal key={step.step} variant="pop" delay={((i % 4) + 1) as 1 | 2 | 3 | 4} className="relative z-10">
-                <div className={`sticker sticker-hover h-full p-6 ${i % 2 === 0 ? "tilt-l" : "tilt-r"} hover:!rotate-0`}>
-                  <div className="mb-4 flex items-center gap-3">
-                    <span className={`grid h-12 w-12 place-items-center rounded-full border-2 border-black/10 text-xl font-extrabold ${c.num}`}>
-                      {step.step}
-                    </span>
-                    <span className={`grid h-12 w-12 place-items-center rounded-xl ${c.icon}`}>
-                      <Icon className="h-6 w-6" />
+                <div className="sticker sticker-hover h-full p-6">
+                  <div className="mb-4">
+                    <span className={`grid h-14 w-14 place-items-center rounded-2xl ${c.num}`}>
+                      <Icon className="h-7 w-7" />
                     </span>
                   </div>
                   <h3 className="mb-2 text-lg font-bold">{step.title}</h3>

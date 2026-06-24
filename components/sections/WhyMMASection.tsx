@@ -50,12 +50,11 @@ export function WhyMMASection() {
             const accent = ACCENTS[i % ACCENTS.length]
             return (
               <Reveal key={item.id} variant="pop" delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
-                <article className={`sticker sticker-hover h-full p-6 ${i % 2 === 0 ? "tilt-l" : "tilt-r"} hover:!rotate-0`}>
-                  <div className="mb-5 flex items-center justify-between">
-                    <span className={`grid h-14 w-14 place-items-center rounded-2xl border-2 border-black/10 ${accent.tile}`}>
+                <article className="sticker sticker-hover h-full p-6">
+                  <div className="mb-5">
+                    <span className={`grid h-14 w-14 place-items-center rounded-2xl ${accent.tile}`}>
                       <Icon className="h-7 w-7" />
                     </span>
-                    <span className="text-4xl font-extrabold text-ink/10">0{i + 1}</span>
                   </div>
                   <h3 className="mb-2 text-lg font-bold leading-snug">{item.title}</h3>
                   <p className="text-sm leading-relaxed text-muted-foreground">{item.description}</p>

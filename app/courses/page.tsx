@@ -83,7 +83,7 @@ export default function Courses() {
 
                     {/* content */}
                     <div className={reversed ? "lg:order-1" : ""}>
-                      <span className="eyebrow mb-4"><Star className="h-4 w-4" /> Programme {String(i + 1).padStart(2, "0")}</span>
+                      <span className="eyebrow mb-4"><Star className="h-4 w-4" /> Programme</span>
                       <h2 className="mb-3 text-3xl font-bold tracking-tight">{course.title}</h2>
                       <p className="mb-5 text-muted-foreground">{course.description}</p>
                       <div className="mb-5 flex flex-wrap gap-2">

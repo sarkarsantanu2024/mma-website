@@ -124,7 +124,7 @@ export function HeroSection() {
       {/* ---------- Overlay content (centered) ---------- */}
       <div className="pointer-events-none absolute inset-0 z-20">
         <div className="container-custom flex h-full items-center justify-center">
-          <div className="relative pointer-events-auto pt-16 text-center">
+          <div className="relative mx-auto max-w-4xl pointer-events-auto pt-16 text-center">
             {/* doodles */}
             <Star className="animate-wiggle absolute -left-6 top-20 hidden h-10 w-10 text-sun lg:block" />
             <Sparkle className="animate-float absolute -right-4 top-28 hidden h-8 w-8 text-bubble lg:block" />
@@ -147,7 +147,7 @@ export function HeroSection() {
               for life.
             </h1>
 
-            <p className="mx-auto mt-5 max-w-xl text-lg text-paper/85">
+            <p className="mx-auto mt-5 text-lg text-paper/85">
               Fun, science-backed brain-development classes for ages 5&ndash;14
               — where mental maths turns into superpowers and big confidence.
             </p>

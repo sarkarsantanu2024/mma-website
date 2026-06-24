@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { footerLinks, contactInfo } from "@/data/navigation"
 import { Facebook, Instagram, Youtube, MessageCircle, MapPin, Phone, Mail, Clock } from "lucide-react"
+import { BackToTop } from "@/components/BackToTop"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -123,9 +124,10 @@ export function Footer() {
       <div className="border-t border-paper/15">
         <div className="container-custom flex flex-col items-center justify-between gap-4 py-6 text-sm text-paper/60 md:flex-row">
           <p>© {currentYear} Mind Mantra Abacus. All rights reserved.</p>
-          <div className="flex gap-6">
+          <div className="flex items-center gap-6">
             <Link href="/privacy" className="hover:text-paper">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-paper">Terms of Service</Link>
+            <BackToTop />
           </div>
         </div>
       </div>
