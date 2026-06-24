@@ -22,7 +22,7 @@ const ACCENTS = [
 ]
 
 const STATS = [
-  { value: "100+", label: "Learning Centres", color: "bg-cobalt text-paper" },
+  { value: "200+", label: "Learning Centres", color: "bg-cobalt text-paper" },
   { value: "50,000+", label: "Students Trained", color: "bg-tomato text-paper" },
   { value: "500+", label: "Certified Mentors", color: "bg-grape text-paper" },
   { value: "98%", label: "Success Rate", color: "bg-pine text-ink" },

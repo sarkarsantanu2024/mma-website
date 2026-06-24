@@ -16,7 +16,7 @@ export default function CentresClient() {
     <Layout>
       <PageHero
         title="Find a centre near you"
-        subtitle="100+ Mind Mantra Abacus centres across India, staffed by certified mentors."
+        subtitle="200+ Mind Mantra Abacus centres across India, staffed by certified mentors."
         image="https://images.unsplash.com/photo-1541692641319-981cc79ee10a?w=1400&h=500&fit=crop"
         badge="Our Centres"
       />

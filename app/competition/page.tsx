@@ -115,7 +115,7 @@ export default function CompetitionPage() {
                 <div className="grid grid-cols-3 gap-2 text-center text-white">
                   {[
                     { value: "5,000+", label: "Students" },
-                    { value: "11", label: "Countries" },
+                    { value: "28", label: "States" },
                     { value: "22nd", label: "Edition" },
                   ].map((s) => (
                     <div key={s.label} className="bg-deep/50 rounded-xl p-2 backdrop-blur-sm">

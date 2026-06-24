@@ -59,7 +59,7 @@ export const competitionData: UpcomingCompetition = {
   description:
     "The National Level Abacus Competition brings together the brightest young minds from across India to showcase their exceptional mental math abilities. This prestigious event is a platform for students to demonstrate the power of abacus training in solving complex calculations with speed and accuracy.",
   longDescription:
-    "Now in its 22nd edition, the Mind Mantra Abacus National Level Competition has grown into India's most celebrated brain development championship. Students from 11 countries compete across multiple categories, performing lightning-fast mental calculations that astound audiences and judges alike. The competition promotes the ancient abacus method as a powerful tool for cognitive development, building concentration, memory, and academic excellence in children.",
+    "Now in its 22nd edition, the Mind Mantra Abacus National Level Competition has grown into India's most celebrated brain development championship. Students from across India compete across multiple categories, performing lightning-fast mental calculations that astound audiences and judges alike. The competition promotes the ancient abacus method as a powerful tool for cognitive development, building concentration, memory, and academic excellence in children.",
   categories: [
     {
       name: "Junior Abacus",
@@ -106,7 +106,7 @@ export const competitionData: UpcomingCompetition = {
     {
       position: "Overall Grand Champion",
       award: "Rolling Trophy + Gold Medal",
-      description: "₹25,000 scholarship + International participation invitation",
+      description: "₹25,000 scholarship + National finals invitation",
     },
     {
       position: "Best Franchise Award",
@@ -135,10 +135,10 @@ export const competitionData: UpcomingCompetition = {
     { activity: "Prize Distribution & Closing", time: "6:00 PM – 7:00 PM" },
   ],
   highlights: [
-    "5,000+ students from across India and 11 countries",
+    "5,000+ students from across India",
     "Live telecast on regional channels",
     "Participation certificates for all contestants",
-    "International qualification round for Grand Champions",
+    "National qualification round for Grand Champions",
     "Cultural performances and exhibitions",
     "Parent observation gallery",
   ],

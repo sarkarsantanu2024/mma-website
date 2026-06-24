@@ -36,10 +36,10 @@ export const previousCompetitionsData: PreviousCompetition[] = [
     centres: 320,
     countries: 10,
     description:
-      "The 21st edition witnessed record participation with over 4,800 students from 10 countries competing in Bengaluru. The event featured a special international segment for the first time.",
+      "The 21st edition witnessed record participation with over 4,800 students from across India competing in Bengaluru. The event featured a special showcase segment for the first time.",
     highlights: [
       "Record 4,800 student participants",
-      "First international segment with participants from 10 countries",
+      "Special showcase segment with participants from across India",
       "Live streaming reached 50,000+ online viewers",
       "Special felicitation for 25-year veterans of abacus teaching",
     ],
@@ -74,7 +74,7 @@ export const previousCompetitionsData: PreviousCompetition[] = [
       "The milestone 20th edition celebrated two decades of excellence in mental math championships. A special golden jubilee ceremony honored founding franchisees and teachers.",
     highlights: [
       "20th anniversary celebration with founding members",
-      "4,500 student participants from 9 countries",
+      "4,500 student participants from across India",
       "Golden Jubilee awards for long-serving teachers",
       "Special documentary screening on 20 years of the competition",
     ],
@@ -132,7 +132,7 @@ export const previousCompetitionsData: PreviousCompetition[] = [
     centres: 260,
     countries: 7,
     description:
-      "Held entirely online due to pandemic restrictions, the 18th edition proved that passion for abacus knows no boundaries. Students from 7 countries competed from their homes.",
+      "Held entirely online due to pandemic restrictions, the 18th edition proved that passion for abacus knows no boundaries. Students from across India competed from their homes.",
     highlights: [
       "India's first fully virtual abacus competition",
       "3,800 participants from home setups",
@@ -160,12 +160,12 @@ export const previousCompetitionsData: PreviousCompetition[] = [
     centres: 350,
     countries: 11,
     description:
-      "The 17th edition set an all-time record with 5,000 participants from 11 countries — the largest abacus competition ever held in India.",
+      "The 17th edition set an all-time record with 5,000 participants from across India — the largest abacus competition ever held in India.",
     highlights: [
       "All-time record 5,000 participants",
-      "11 countries represented",
+      "Every region of India represented",
       "Chief Guest: Padma Shri awardee educationist",
-      "International media coverage from 5 countries",
+      "National media coverage across India",
     ],
     winners: [
       { name: "Rahul Joshi", category: "Grand Champion", centre: "Nagpur South", city: "Nagpur", position: "Gold" },

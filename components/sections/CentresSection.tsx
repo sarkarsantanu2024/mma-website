@@ -22,7 +22,7 @@ export function CentresSection() {
                 <span className="highlight"><span>near you.</span></span>
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                100+ centres across India, staffed by certified mentors — quality
+                200+ centres across India, staffed by certified mentors — quality
                 training is always within reach.
               </p>
             </Reveal>
@@ -62,7 +62,7 @@ export function CentresSection() {
                 {/* count badge */}
                 <span className="absolute bottom-4 left-4 inline-flex items-center gap-1.5 rounded-full bg-paper/90 px-3 py-1.5 text-xs font-bold text-ink shadow-soft backdrop-blur">
                   <MapPin className="h-3.5 w-3.5 text-tomato" />
-                  100+ centres across India
+                  200+ centres across India
                 </span>
               </div>
               <Link href="/centres" className="btn-bold btn-saffron mt-6">

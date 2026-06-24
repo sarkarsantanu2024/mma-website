@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button";
 const STATS = [
   { value: "25+", label: "Years of Competitions" },
   { value: "50,000+", label: "Total Participants" },
-  { value: "11", label: "Countries Represented" },
+  { value: "28", label: "States Represented" },
   { value: "22", label: "Editions Completed" },
 ];
 
@@ -99,7 +99,7 @@ function CompetitionAccordion({
                 {[
                   { value: comp.participants.toLocaleString(), label: "Participants" },
                   { value: comp.centres, label: "Centres" },
-                  { value: comp.countries, label: "Countries" },
+                  { value: comp.countries, label: "States" },
                 ].map((s) => (
                   <div key={s.label} className="p-3 rounded-xl bg-muted/50">
                     <div className="font-bold text-primary">{s.value}</div>

@@ -21,7 +21,7 @@ export const heroData: HeroData = {
   ctaSecondary: "Download Brochure",
   stats: [
     { value: 15, suffix: "+", label: "Years Experience" },
-    { value: 100, suffix: "+", label: "Learning Centres" },
+    { value: 200, suffix: "+", label: "Learning Centres" },
     { value: 50000, suffix: "+", label: "Happy Students" },
   ],
 };
