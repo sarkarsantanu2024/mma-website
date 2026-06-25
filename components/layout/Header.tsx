@@ -27,83 +27,89 @@ export function Header() {
 
   return (
     <>
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        overHero
-          ? "bg-transparent"
-          : "bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/80 border-b border-black/10 shadow-sticker-sm"
-      }`}
-    >
-      {/* full-width bar with comfortable side padding */}
-      <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <Link href="/" className="group flex items-center gap-3">
-            <span className="grid h-11 w-11 place-items-center rounded-xl bg-saffron shadow-sticker-sm transition-transform group-hover:-rotate-6">
-              <span className="font-extrabold text-xl text-ink">M</span>
-            </span>
-            <span className="leading-none">
-              <span className={`block font-extrabold text-lg tracking-tight ${overHero ? "text-paper drop-shadow" : "text-ink"}`}>
-                Mind Mantra
-              </span>
-              <span className={`mt-0.5 block text-[0.65rem] font-bold uppercase tracking-[0.3em] ${overHero ? "text-sun" : "text-cobalt"}`}>
-                Abacus
-              </span>
-            </span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-0.5">
-            {navigationData.map((item) => {
-              const active = pathname === item.href;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`relative px-3 py-2 text-sm font-semibold transition-colors ${
-                    overHero
-                      ? active ? "text-paper" : "text-paper/80 hover:text-paper"
-                      : active ? "text-ink" : "text-muted-foreground hover:text-ink"
-                  }`}
-                >
-                  {item.label}
-                  <span
-                    className={`pointer-events-none absolute inset-x-3 -bottom-0.5 h-[3px] rounded-full bg-saffron transition-all duration-300 ${
-                      active ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
-                    }`}
-                  />
-                </Link>
-              );
-            })}
-          </nav>
-
-          {/* Right Side Actions */}
-          <div className="flex items-center gap-2 md:gap-3">
-            <Link
-              href="/contact"
-              className="btn-bold btn-saffron hidden md:inline-flex !px-5 !py-2.5 text-sm"
-            >
-              <GraduationCap className="h-4 w-4" />
-              Free Demo Class
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          overHero
+            ? "bg-transparent"
+            : "bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/80 border-b border-black/10 shadow-sticker-sm"
+        }`}
+      >
+        {/* full-width bar with comfortable side padding */}
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
+          <div className="flex items-center justify-between h-16 md:h-20">
+            {/* Logo — white over the dark hero, blue on the solid header */}
+            <Link href="/" className="group flex items-center" aria-label="Mind Mantra Abacus — home">
+              <img
+                src={overHero ? "/brand-logo-white.png" : "/brand-logo-blue.png"}
+                alt="Mind Mantra Abacus"
+                className="h-10 w-auto transition-transform group-hover:-rotate-3 md:h-12"
+              />
             </Link>
 
-            {/* Mobile Menu Button */}
-            <button
-              className={`xl:hidden grid h-10 w-10 place-items-center rounded-lg border-2 ${
-                overHero ? "border-paper/50 text-paper" : "border-black/10 text-ink"
-              }`}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </button>
+            {/* Desktop Navigation */}
+            <nav className="hidden xl:flex items-center gap-0.5">
+              {navigationData.map((item) => {
+                const active = pathname === item.href;
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`relative px-3 py-2 text-sm font-semibold transition-colors ${
+                      overHero
+                        ? active
+                          ? "text-paper"
+                          : "text-paper/80 hover:text-paper"
+                        : active
+                          ? "text-ink"
+                          : "text-muted-foreground hover:text-ink"
+                    }`}
+                  >
+                    {item.label}
+                    <span
+                      className={`pointer-events-none absolute inset-x-3 -bottom-0.5 h-[3px] rounded-full bg-saffron transition-all duration-300 ${
+                        active
+                          ? "opacity-100 scale-x-100"
+                          : "opacity-0 scale-x-0"
+                      }`}
+                    />
+                  </Link>
+                );
+              })}
+            </nav>
+
+            {/* Right Side Actions */}
+            <div className="flex items-center gap-2 md:gap-3">
+              <Link
+                href="/contact"
+                className="btn-bold btn-saffron hidden md:inline-flex !px-5 !py-2.5 text-sm"
+              >
+                <GraduationCap className="h-4 w-4" />
+                Free Demo Class
+              </Link>
+
+              {/* Mobile Menu Button */}
+              <button
+                className={`xl:hidden grid h-10 w-10 place-items-center rounded-lg border-2 ${
+                  overHero
+                    ? "border-paper/50 text-paper"
+                    : "border-black/10 text-ink"
+                }`}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                aria-label="Toggle menu"
+              >
+                {isMobileMenuOpen ? (
+                  <X className="h-5 w-5" />
+                ) : (
+                  <Menu className="h-5 w-5" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    {/* ---------- Mobile slide-in drawer (right side) ---------- */}
-    {/* Rendered OUTSIDE the header so the header's backdrop-blur doesn't trap
+      {/* ---------- Mobile slide-in drawer (right side) ---------- */}
+      {/* Rendered OUTSIDE the header so the header's backdrop-blur doesn't trap
         this fixed element inside the 64px-tall bar. */}
       <div
         className={`xl:hidden fixed inset-0 z-[60] ${
@@ -150,7 +156,9 @@ export function Header() {
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`rounded-xl px-4 py-3 text-sm font-semibold transition-colors ${
-                      active ? "bg-deep text-paper" : "text-foreground hover:bg-muted"
+                      active
+                        ? "bg-deep text-paper"
+                        : "text-foreground hover:bg-muted"
                     }`}
                   >
                     {item.label}
