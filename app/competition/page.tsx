@@ -157,10 +157,11 @@ export default function CompetitionPage() {
               {comp.categories.map((cat, i) => (
                 <div key={cat.name} className="p-6 sticker sticker-hover">
                   <div
-                    className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 font-bold text-white text-sm"
-                    style={{ background: "var(--gradient-primary)" }}
+                    className={`mb-4 grid h-12 w-12 place-items-center rounded-xl ${
+                      ["bg-cobalt text-paper", "bg-saffron text-ink", "bg-tomato text-paper", "bg-grape text-paper", "bg-pine text-ink"][i % 5]
+                    }`}
                   >
-                    {i + 1}
+                    <Trophy className="h-6 w-6" />
                   </div>
                   <h3 className="font-heading font-bold text-lg mb-1">{cat.name}</h3>
                   <p className="text-sm text-muted-foreground mb-3">{cat.ageGroup}</p>
