@@ -109,8 +109,8 @@ export function HeroSection() {
                 />
               )}
               {/* strong even deep-navy wash so centered text stays legible across every slide (incl. busy/bright images) */}
-              <div className="absolute inset-0 bg-deep/82" />
-              <div className="absolute inset-0 bg-gradient-to-t from-deep/55 via-deep/20 to-deep/45" />
+              <div className="absolute inset-0 bg-deep/20" />
+              <div className="absolute inset-0 bg-gradient-to-t from-deep/55 via-deep/20 to-deep/90" />
               {slide.type === "video" && (
                 <span className="absolute right-6 top-28 inline-flex items-center gap-1.5 rounded-full bg-paper/15 px-3 py-1 text-xs font-bold uppercase tracking-wide text-paper backdrop-blur">
                   <Play className="h-3 w-3" /> Live class

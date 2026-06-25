@@ -66,11 +66,12 @@ export default function CompetitionPage() {
                   <a href={comp.registrationLink}>Register Now</a>
                 </Button>
               )}
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900 px-6 py-3 rounded-full" asChild>
-                <Link href="/previous-competition">
-                  View Past Competitions <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </Button>
+              <Link
+                href="/previous-competition"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-paper/60 bg-paper/10 px-6 py-3 font-bold text-paper backdrop-blur transition-all hover:bg-paper hover:text-deep"
+              >
+                View Past Competitions <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </div>
@@ -263,17 +264,23 @@ export default function CompetitionPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               {comp.isLive ? (
-                <Button className="bg-white text-orange-600 hover:bg-white/90 font-bold px-8 py-3 rounded-full text-base" asChild>
-                  <a href={comp.registrationLink}>Register Now — Free</a>
-                </Button>
+                <a
+                  href={comp.registrationLink}
+                  className="inline-flex items-center rounded-full bg-deep px-8 py-3 text-base font-bold text-paper transition-all hover:-translate-y-0.5 hover:bg-ink"
+                >
+                  Register Now — Free
+                </a>
               ) : (
-                <Button className="bg-white text-gray-600 px-8 py-3 rounded-full text-base" disabled>
+                <span className="inline-flex cursor-not-allowed items-center rounded-full bg-paper/85 px-8 py-3 text-base font-bold text-ink/60">
                   Registration Not Open Yet
-                </Button>
+                </span>
               )}
-              <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-3 rounded-full text-base" asChild>
-                <Link href="/previous-competition">View Past Competitions</Link>
-              </Button>
+              <Link
+                href="/previous-competition"
+                className="inline-flex items-center rounded-full border-2 border-paper bg-transparent px-8 py-3 text-base font-bold text-paper transition-all hover:bg-paper hover:text-[#d97706]"
+              >
+                View Past Competitions
+              </Link>
             </div>
           </div>
 
