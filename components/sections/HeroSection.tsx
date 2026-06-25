@@ -108,9 +108,9 @@ export function HeroSection() {
                   className="h-[88vh] min-h-[560px] w-full object-cover"
                 />
               )}
-              {/* strong even deep-navy wash so centered text stays legible across every slide (incl. bright video) */}
-              <div className="absolute inset-0" />
-              <div className="absolute inset-0 bg-gradient-to-t from-deep/70 via-deep/40 to-deep/55" />
+              {/* strong even deep-navy wash so centered text stays legible across every slide (incl. busy/bright images) */}
+              <div className="absolute inset-0 bg-deep/82" />
+              <div className="absolute inset-0 bg-gradient-to-t from-deep/55 via-deep/20 to-deep/45" />
               {slide.type === "video" && (
                 <span className="absolute right-6 top-28 inline-flex items-center gap-1.5 rounded-full bg-paper/15 px-3 py-1 text-xs font-bold uppercase tracking-wide text-paper backdrop-blur">
                   <Play className="h-3 w-3" /> Live class

@@ -10,7 +10,7 @@ export function CompetitionButton() {
   return (
     <Link
       href="/competition"
-      className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-1.5 cursor-pointer group"
+      className="fixed right-0 top-1/4 -translate-y-1/2 z-50 flex flex-col items-center gap-1.5 cursor-pointer group"
       style={{ writingMode: "vertical-rl" }}
       aria-label="Competition"
     >
@@ -34,7 +34,10 @@ export function CompetitionButton() {
         </span>
 
         {/* Trophy icon */}
-        <Trophy className="w-4 h-4 text-white flex-shrink-0" style={{ transform: "rotate(90deg)" }} />
+        <Trophy
+          className="w-4 h-4 text-white flex-shrink-0"
+          style={{ transform: "rotate(90deg)" }}
+        />
 
         {/* Label */}
         <span
